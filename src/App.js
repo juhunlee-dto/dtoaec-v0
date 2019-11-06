@@ -1,33 +1,26 @@
-import React from "react";
-import logo from "./D-Logo-512-05.svg";
+import React, { Component } from "react";
+import { Route, BrowserRouter, Redirect, Switch } from "react-router-dom";
+import NavBar from "./components/navBar";
+import MainPage from "./components/main";
+import LoginForm from "./components/loginForm";
 import "./App.css";
 
-function App() {
-  const p1Style = {
-    fontSize: "6vmin",
-    textAlign: "center",
-    marginBottom: "2px"
-  };
-
-  const p2Style = {
-    fontSize: "3vmin",
-    textAlign: "center",
-    marginTop: "0"
-  };
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <p style={p1Style}>D.TO AEC</p>
-        <p style={p2Style}>
-          User Driven Knowledge Sharing Platform for AEC Industy
-        </p>
-        <p style={p2Style}>Coming Soon...</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <BrowserRouter>
+          <NavBar></NavBar>
+          <main className="container">
+            <Switch>
+              <Route path="/login" component={LoginForm}></Route>
+              <Route path="/" component={MainPage}></Route>
+            </Switch>
+          </main>
+        </BrowserRouter>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
