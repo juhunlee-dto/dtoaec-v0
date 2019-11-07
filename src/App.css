@@ -1,18 +1,28 @@
-.App-logo {
+.dto-logo {
   /* animation: App-logo-spin infinite 20s linear; */
   height: 30vmin;
   pointer-events: none;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dto-statement-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: center; */
+  width: 100%;
+  background-color: #282c34;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 1000px;
+
+  color: whitesmoke;
+}
+
+.form-container {
+  margin-top: 35px;
+  min-width: 350px;
 }
 
 .navbar {
@@ -20,16 +30,20 @@
 }
 .nav-link {
   color: white !important;
+  margin-left: 20px !important;
+}
+.nav-item {
+  display: inline-flex !important;
 }
 
-input[type="text"],
+input,
 textarea {
   outline: none !important;
   padding: 1px 0px 3px 10px !important;
   margin: 5px 1px 3px 0px !important;
   border: 1px solid #282c34 !important;
 }
-input[type="text"]:focus,
+input:focus,
 textarea:focus {
   box-shadow: 0 0 7px #465c7a !important;
   padding: 1px 0px 3px 10px !important;
